@@ -280,7 +280,7 @@ func Run(o *Options) error {
 			}
 		}
 
-		remoteBranch := "autobump"
+		remoteBranch := "autobump-canary-test"
 		stdout := HideSecretsWriter{Delegate: os.Stdout, Censor: &sa}
 		stderr := HideSecretsWriter{Delegate: os.Stderr, Censor: &sa}
 		if err := MakeGitCommit(fmt.Sprintf("git@github.com:%s/%s.git", o.GitHubLogin, o.RemoteName), remoteBranch, o.GitName, o.GitEmail, o.Prefixes, stdout, stderr, versions); err != nil {
