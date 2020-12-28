@@ -15,7 +15,7 @@ extraFiles:
   - "config/jobs/kubernetes/kops/build-pipeline.py"
   - "releng/generate_tests.py"
   - "images/kubekins-e2e/Dockerfile"
-targetVersion: "testtest"
+targetVersion: "changetest"
 prefixes:
   - name: "Prow"
     prefix: "gcr.io/k8s-prow/"

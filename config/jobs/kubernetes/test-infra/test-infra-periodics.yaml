@@ -11,7 +11,7 @@ periodics:
     preset-bazel-scratch-dir: "true"
   spec:
     containers:
-    - image: gcr.io/k8s-testimages/launcher.gcr.io/google/bazel:testtest
+    - image: gcr.io/k8s-testimages/launcher.gcr.io/google/bazel:changetest
       command:
       - hack/bazel.sh
       args:
@@ -31,7 +31,7 @@ periodics:
   interval: 30m
   spec:
     containers:
-    - image: gcr.io/k8s-testimages/triage:testtest
+    - image: gcr.io/k8s-testimages/triage:changetest
       imagePullPolicy: Always
       env:
       - name: GOOGLE_APPLICATION_CREDENTIALS
@@ -73,7 +73,7 @@ periodics:
   interval: 24h
   spec:
     containers:
-    - image: gcr.io/k8s-testimages/bigquery:testtest
+    - image: gcr.io/k8s-testimages/bigquery:changetest
       args:
       - --scenario=execute
       - --
@@ -101,7 +101,7 @@ periodics:
   interval: 1h
   spec:
     containers:
-    - image: gcr.io/k8s-testimages/bigquery:testtest
+    - image: gcr.io/k8s-testimages/bigquery:changetest
       args:
       - --scenario=execute
       - --

@@ -41,7 +41,7 @@ import (
 )
 
 const (
-	forkRemoteName = "bumper-fork-canary"
+	forkRemoteName = "bumper-fork-remote"
 
 	latestVersion          = "latest"
 	upstreamVersion        = "upstream"
@@ -280,14 +280,14 @@ func Run(o *Options) error {
 			}
 		}
 
-		remoteBranch := "canary-test-2"
+		remoteBranch := "autobump-canary-test-2"
 		stdout := HideSecretsWriter{Delegate: os.Stdout, Censor: &sa}
 		stderr := HideSecretsWriter{Delegate: os.Stderr, Censor: &sa}
 		if err := MakeGitCommit(fmt.Sprintf("git@github.com:%s/%s.git", o.GitHubLogin, o.RemoteName), remoteBranch, o.GitName, o.GitEmail, o.Prefixes, stdout, stderr, versions); err != nil {
 			return fmt.Errorf("failed to push changes to the remote branch: %w", err)
 		}
 
-		if err := UpdatePR(gc, o.GitHubOrg, o.GitHubRepo, images, getAssignment(o.OncallAddress), "Update prow to", o.GitHubLogin+":"+remoteBranch, "master", updater.PreventMods, o.Prefixes, versions); err != nil {
+		if err := UpdatePR(gc, o.GitHubOrg, o.GitHubRepo, images, getAssignment(o.OncallAddress), "matchtitleTest", o.GitHubLogin+":"+remoteBranch, "master", updater.PreventMods, o.Prefixes, versions); err != nil {
 			return fmt.Errorf("failed to create the PR: %w", err)
 		}
 	}

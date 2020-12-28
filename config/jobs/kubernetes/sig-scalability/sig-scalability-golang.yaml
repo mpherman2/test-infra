@@ -9,7 +9,7 @@ periodics:
     testgrid-tab-name: build-and-push-k8s-at-golang-tip
   spec:
     containers:
-      - image: gcr.io/k8s-testimages/bootstrap:testtest
+      - image: gcr.io/k8s-testimages/bootstrap:changetest
         args:
         - --root=/go/src
         - --repo=k8s.io/perf-tests=master
@@ -90,7 +90,7 @@ periodics:
       - --test-cmd-name=ClusterLoaderV2
       - --timeout=180m
       - --use-logexporter
-      image: gcr.io/k8s-testimages/kubekins-e2e:testtest
+      image: gcr.io/k8s-testimages/kubekins-e2e:changetest
       env:
       - name: CL2_ENABLE_VIOLATIONS_FOR_API_CALL_PROMETHEUS
         value: "true"

@@ -9,7 +9,7 @@ periodics:
     path_alias: k8s.io/test-infra
   spec:
     containers:
-    - image: gcr.io/k8s-testimages/benchmarkjunit:testtest
+    - image: gcr.io/k8s-testimages/benchmarkjunit:changetest
       command:
       - /benchmarkjunit
       args:

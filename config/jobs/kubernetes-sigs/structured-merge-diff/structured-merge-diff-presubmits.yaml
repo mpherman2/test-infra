@@ -8,7 +8,7 @@ presubmits:
     path_alias: sigs.k8s.io/structured-merge-diff
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/kubekins-e2e:testtest
+      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest
         command:
         - go
         args:
@@ -27,7 +27,7 @@ presubmits:
     path_alias: sigs.k8s.io/structured-merge-diff
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/kubekins-e2e:testtest
+      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest
         command:
         - bash
         - -c
@@ -43,7 +43,7 @@ presubmits:
     path_alias: sigs.k8s.io/structured-merge-diff
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/benchmarkjunit:testtest
+      - image: gcr.io/k8s-testimages/benchmarkjunit:changetest
         command:
         - /benchmarkjunit
         args:
