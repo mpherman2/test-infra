@@ -81,7 +81,7 @@ postsubmits:
     spec:
       serviceAccountName: prow-deployer
       containers:
-      - image: gcr.io/k8s-testimages/gcloud-in-go:changetest
+      - image: gcr.io/k8s-testimages/gcloud-in-go:changetest22
         command:
         - bash
         args:
@@ -105,7 +105,7 @@ postsubmits:
     spec:
       serviceAccountName: prow-deployer
       containers:
-      - image: gcr.io/k8s-testimages/gcloud-in-go:changetest
+      - image: gcr.io/k8s-testimages/gcloud-in-go:changetest22
         command:
         - bash
         args:

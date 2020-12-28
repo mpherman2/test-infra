@@ -14,7 +14,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -43,7 +43,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -72,7 +72,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -101,7 +101,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -130,7 +130,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -159,7 +159,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -188,7 +188,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -217,7 +217,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -246,7 +246,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -275,7 +275,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -304,7 +304,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -333,7 +333,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -362,7 +362,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -391,7 +391,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -420,7 +420,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -449,7 +449,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -478,7 +478,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -507,7 +507,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -536,7 +536,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -565,7 +565,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -594,7 +594,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -623,7 +623,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -652,7 +652,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -681,7 +681,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -710,7 +710,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -739,7 +739,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -768,7 +768,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:changetest
+          - image: gcr.io/k8s-testimages/image-builder:changetest22
             command:
               - /run.sh
             args:
@@ -818,7 +818,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:changetest
+      - image: gcr.io/k8s-testimages/image-builder:changetest22
         command:
           - /run.sh
         args:

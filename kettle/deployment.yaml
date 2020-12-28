@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: kettle
-        image: gcr.io/k8s-testimages/kettle:changetest
+        image: gcr.io/k8s-testimages/kettle:changetest22
         imagePullPolicy: Always
         env:
         - name: GOOGLE_APPLICATION_CREDENTIALS

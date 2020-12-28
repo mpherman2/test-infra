@@ -16,7 +16,7 @@ periodics:
     path_alias: k8s.io/cloud-provider-gcp
   spec:
     containers:
-    - image: gcr.io/k8s-testimages/krte:changetest
+    - image: gcr.io/k8s-testimages/krte:changetest22
       resources:
         limits:
           cpu: 4

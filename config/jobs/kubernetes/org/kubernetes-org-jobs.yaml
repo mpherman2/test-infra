@@ -8,7 +8,7 @@ presubmits:
       preset-bazel-scratch-dir: "true"
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/launcher.gcr.io/google/bazel:changetest
+      - image: gcr.io/k8s-testimages/launcher.gcr.io/google/bazel:changetest22
         command:
         - bazel
         args:
@@ -26,7 +26,7 @@ presubmits:
       preset-bazel-scratch-dir: "true"
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/launcher.gcr.io/google/bazel:changetest
+      - image: gcr.io/k8s-testimages/launcher.gcr.io/google/bazel:changetest22
         command:
         - ./hack/verify-all.sh
     annotations:

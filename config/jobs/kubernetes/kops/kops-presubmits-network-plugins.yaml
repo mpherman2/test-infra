@@ -20,7 +20,7 @@ presubmits:
     path_alias: k8s.io/kops
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest
+      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest22
         imagePullPolicy: Always
         command:
         - runner.sh
@@ -72,7 +72,7 @@ presubmits:
     path_alias: k8s.io/kops
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest
+      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest22
         imagePullPolicy: Always
         command:
         - runner.sh
@@ -124,7 +124,7 @@ presubmits:
     path_alias: k8s.io/kops
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest
+      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest22
         imagePullPolicy: Always
         command:
         - runner.sh
@@ -176,7 +176,7 @@ presubmits:
     path_alias: k8s.io/kops
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest
+      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest22
         imagePullPolicy: Always
         command:
         - runner.sh
@@ -228,7 +228,7 @@ presubmits:
     path_alias: k8s.io/kops
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest
+      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest22
         imagePullPolicy: Always
         command:
         - runner.sh
@@ -280,7 +280,7 @@ presubmits:
     path_alias: k8s.io/kops
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest
+      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest22
         imagePullPolicy: Always
         command:
         - runner.sh
@@ -332,7 +332,7 @@ presubmits:
     path_alias: k8s.io/kops
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest
+      - image: gcr.io/k8s-testimages/kubekins-e2e:changetest22
         imagePullPolicy: Always
         command:
         - runner.sh

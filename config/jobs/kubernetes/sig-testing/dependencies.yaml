@@ -21,7 +21,7 @@ presubmits:
       - name: main
         command:
         - runner.sh
-        image: gcr.io/k8s-testimages/kubekins-e2e:changetest
+        image: gcr.io/k8s-testimages/kubekins-e2e:changetest22
         args:
         - make
         - verify
@@ -53,7 +53,7 @@ presubmits:
       - name: main
         command:
         - runner.sh
-        image: gcr.io/k8s-testimages/kubekins-e2e:changetest
+        image: gcr.io/k8s-testimages/kubekins-e2e:changetest22
         args:
         - make
         - verify
