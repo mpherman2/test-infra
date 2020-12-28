@@ -19,7 +19,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -48,7 +48,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -77,7 +77,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -106,7 +106,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -135,7 +135,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -164,7 +164,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -193,7 +193,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -222,7 +222,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -251,7 +251,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -280,7 +280,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -309,7 +309,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -338,7 +338,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -367,7 +367,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -396,7 +396,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -425,7 +425,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -454,7 +454,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -483,7 +483,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -512,7 +512,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+          - image: gcr.io/k8s-testimages/image-builder:test
             command:
               - /run.sh
             args:
@@ -549,7 +549,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -580,7 +580,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -611,7 +611,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -642,7 +642,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -673,7 +673,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -704,7 +704,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -735,7 +735,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -766,7 +766,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -797,7 +797,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -828,7 +828,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -859,7 +859,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -890,7 +890,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:
@@ -921,7 +921,7 @@ periodics:
   spec:
     serviceAccountName: gcb-builder
     containers:
-      - image: gcr.io/k8s-testimages/image-builder:v20200901-ab141a0
+      - image: gcr.io/k8s-testimages/image-builder:test
         command:
           - /run.sh
         env:

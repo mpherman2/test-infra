@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: greenhouse
-        image: gcr.io/k8s-testimages/greenhouse:latest
+        image: gcr.io/k8s-testimages/greenhouse:test
         imagePullPolicy: Always
         ports:
         - name: cache
