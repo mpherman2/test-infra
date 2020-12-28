@@ -24,7 +24,7 @@ presubmits:
       preset-kind-volume-mounts: "true"
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/kubekins-e2e:test
+      - image: gcr.io/k8s-testimages/kubekins-e2e:testtest
         securityContext:
           privileged: true
         command:

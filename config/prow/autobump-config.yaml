@@ -4,7 +4,7 @@ gitHubToken: "/usr/local/google/home/mpherman/token"
 skipPullRequest: false
 gitHubOrg: "mpherman2"
 gitHubRepo: "test-infra"
-remoteName: "test-infra-2"
+remoteName: "test-infra"
 upstreamURLBase: "https://raw.githubusercontent.com/kubernetes/test-infra/master"
 includedConfigPaths:
   - "."
@@ -15,7 +15,7 @@ extraFiles:
   - "config/jobs/kubernetes/kops/build-pipeline.py"
   - "releng/generate_tests.py"
   - "images/kubekins-e2e/Dockerfile"
-targetVersion: "test"
+targetVersion: "testtest"
 prefixes:
   - name: "Prow"
     prefix: "gcr.io/k8s-prow/"

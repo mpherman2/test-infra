@@ -14,7 +14,7 @@ postsubmits:
       spec:
         serviceAccountName: gcb-builder
         containers:
-          - image: gcr.io/k8s-testimages/image-builder:test
+          - image: gcr.io/k8s-testimages/image-builder:testtest
             command:
               - /run.sh
             args:

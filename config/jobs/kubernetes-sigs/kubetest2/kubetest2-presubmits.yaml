@@ -7,7 +7,7 @@ presubmits:
       preset-dind-enabled: "true"
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/krte:test
+      - image: gcr.io/k8s-testimages/krte:testtest
         command:
         - wrapper.sh
         args:
@@ -22,7 +22,7 @@ presubmits:
       preset-dind-enabled: "true"
     spec:
       containers:
-      - image: gcr.io/k8s-testimages/krte:test
+      - image: gcr.io/k8s-testimages/krte:testtest
         command:
         - wrapper.sh
         args:
