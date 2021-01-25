@@ -732,6 +732,7 @@ func generateSummary(name, repo, prefix string, summarise bool, images map[strin
 		component string
 	}
 	versions := map[string][]delta{}
+	logrus.Info("IMAGES HERE \n\n", images)
 	for image, newTag := range images {
 		if !strings.HasPrefix(image, prefix) {
 			continue
