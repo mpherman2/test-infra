@@ -494,7 +494,7 @@ func updateReferences(imageBumperCli imageBumper, filterRegexp *regexp.Regexp, o
 }
 
 func upstreamImageVersionResolver(
-	o *Options, upstreamVersionType string, parse func(upstreamAddress string) (string, error), imageBumperCli imageBumper) (func(imageHost, imageName, currentTag string) (string, error), error) {
+	o *Options, upstreamVersionType string, parse func(upstreamAddress, prefix string) (string, error), imageBumperCli imageBumper) (func(imageHost, imageName, currentTag string) (string, error), error) {
 	upstreamVersions, err := upstreamConfigVersions(upstreamVersionType, o, parse)
 	if err != nil {
 		return nil, err
@@ -512,7 +512,7 @@ func upstreamImageVersionResolver(
 	}, nil
 }
 
-func upstreamConfigVersions(upstreamVersionType string, o *Options, parse func(upstreamAddress string) (string, error)) (versions map[string]string, err error) {
+func upstreamConfigVersions(upstreamVersionType string, o *Options, parse func(upstreamAddress, prefix string) (string, error)) (versions map[string]string, err error) {
 	versions = make(map[string]string)
 	var upstreamAddress string
 	for _, prefix := range o.Prefixes {
@@ -524,7 +524,7 @@ func upstreamConfigVersions(upstreamVersionType string, o *Options, parse func(u
 			return nil, fmt.Errorf("unsupported upstream version type: %s, must be one of %v",
 				upstreamVersionType, []string{upstreamVersion, upstreamStagingVersion})
 		}
-		version, err := parse(upstreamAddress)
+		version, err := parse(upstreamAddress, prefix.Prefix)
 		if err != nil {
 			return nil, err
 		}
@@ -534,7 +534,20 @@ func upstreamConfigVersions(upstreamVersionType string, o *Options, parse func(u
 	return versions, nil
 }
 
-func parseUpstreamImageVersion(upstreamAddress string) (string, error) {
+func findExactMatch(body, prefix string) (string, error) {
+	for _, line := range strings.Split(strings.TrimSuffix(body, "\n"), "\n") {
+		if strings.Contains(line, prefix) {
+			res := imageMatcher.FindStringSubmatch(string(line))
+			if len(res) < 2 {
+				return "", fmt.Errorf("the image tag is malformatted: %v", res)
+			}
+			return res[1], nil
+		}
+	}
+	return "", fmt.Errorf("unable to find match for %s in upstream refConfigFile", prefix)
+}
+
+func parseUpstreamImageVersion(upstreamAddress, prefix string) (string, error) {
 	resp, err := http.Get(upstreamAddress)
 	if err != nil {
 		return "", fmt.Errorf("error sending GET request to %q: %w", upstreamAddress, err)
@@ -547,11 +560,7 @@ func parseUpstreamImageVersion(upstreamAddress string) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("error reading the response body: %w", err)
 	}
-	res := imageMatcher.FindStringSubmatch(string(body))
-	if len(res) < 2 {
-		return "", fmt.Errorf("the image tag is malformatted: %v", res)
-	}
-	return res[1], nil
+	return findExactMatch(string(body), prefix)
 }
 
 func isUnderPath(name string, paths []string) bool {
@@ -573,7 +582,7 @@ func getVersionsAndCheckConsistency(prefixes []Prefix, images map[string]string)
 	versions := map[string][]string{}
 	for _, prefix := range prefixes {
 		newVersions := 0
-		unbumped_found := false
+		unbumpedFound := false
 		for k, v := range images {
 			if strings.HasPrefix(k, prefix.Prefix) {
 				if _, ok := versions[v]; !ok {
@@ -583,11 +592,11 @@ func getVersionsAndCheckConsistency(prefixes []Prefix, images map[string]string)
 				if !strings.Contains(k, v) {
 					versions[v] = append(versions[v], k)
 				} else {
-					unbumped_found = true
+					unbumpedFound = true
 					newVersions--
 				}
 				//If there are more than 1 new images, or an unbumped image and a new bumped image, it is not consistent
-				if prefix.ConsistentImages && (newVersions > 1 || (unbumped_found && newVersions > 0)) {
+				if prefix.ConsistentImages && (newVersions > 1 || (unbumpedFound && newVersions > 0)) {
 					return nil, fmt.Errorf("%q was supposed to be bumped consistently but was not", prefix.Name)
 				}
 			}
